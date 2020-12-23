@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HistoryOfViolations">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/label2"
+                android:layout_width="294dp"
+                android:layout_height="43dp"
+                android:layout_gravity="center"
+                android:text="История нарушений"
+                android:textColor="@android:color/background_dark"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <LinearLayout
+                android:layout_width="137dp"
+                android:layout_height="47dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/filters"
+                    android:layout_width="140dp"
+                    android:layout_height="42dp"
+                    android:onClick="openOptions"
+                    android:layout_marginBottom="-5dp"
+                    android:background="@color/colorBtn"
+                    android:text="Параметры" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="244dp"
+                android:layout_height="47dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/showMap"
+                    android:layout_width="43dp"
+                    android:layout_height="42dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/map"
+                    android:onClick="showMapFrg" />
+
+                <Button
+                    android:id="@+id/showList"
+                    android:layout_width="43dp"
+                    android:layout_height="42dp"
+
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/list"
+                    android:onClick="showListFrg" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/mapCon"
+                android:layout_width="match_parent"
+                android:layout_height="274dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="0dp">
+
+            </FrameLayout>
+
+            <ScrollView
+                android:id="@+id/infoAboutMarker"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_below="@+id/mapCon"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="1dp"
+                android:background="#20E367">
+
+                <LinearLayout
+                    android:id="@+id/infoAboutMarkerLL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#20E367"
+                    android:orientation="vertical" />
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#20E367">
+
+                <LinearLayout
+                    android:id="@+id/frCon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#20E367"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
